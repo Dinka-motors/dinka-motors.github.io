@@ -9,8 +9,7 @@
 </head>
 <body>
   <header>
-    <h1>DINKA MOTORS</h1>
-    <p>익스트림 라이프를 위한 하이퍼포먼스 차량 브랜드</p>
+    <img src="assets/img/logo.jpg" alt="Dinka Motors Logo" class="logo">
   </header>
 
   <nav>
@@ -19,6 +18,17 @@
     <a href="#manager">Manager</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <section id="slider">
+    <div class="slider">
+      <img src="assets/img/1.jpg" class="slide active" alt="Slide 1">
+      <img src="assets/img/2.jpg" class="slide" alt="Slide 2">
+      <img src="assets/img/3.jpg" class="slide" alt="Slide 3">
+      <img src="assets/img/4.jpg" class="slide" alt="Slide 4">
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+  </section>
 
   <section id="about">
     <h2>ABOUT US</h2>
@@ -66,5 +76,25 @@
   <footer>
     <p>© 2025 DINKA MOTORS. All rights reserved.</p>
   </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides(n) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      slideIndex = (n + slides.length) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }
+
+    function plusSlides(n) {
+      showSlides(slideIndex + n);
+    }
+
+    // 자동 실행 (선택적으로 비활성화 가능)
+    setInterval(() => plusSlides(1), 6000);
+  </script>
 </body>
 </html>
