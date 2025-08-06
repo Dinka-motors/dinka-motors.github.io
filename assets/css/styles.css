@@ -207,3 +207,48 @@ footer {
   color: #eee;
   margin-bottom: 2rem;
 }
+
+.why-dinka {
+  text-align: center;
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.why-dinka h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.why-dinka .underline {
+  width: 60px;
+  height: 4px;
+  background: red;
+  margin: 10px auto 40px auto;
+}
+
+.why-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.icon-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.icon-item p {
+  font-weight: 600;
+  color: #ccc;
+}
+
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+}
