@@ -70,12 +70,15 @@ footer {
 .slider {
   position: relative;
   overflow: hidden;
-  margin-bottom: 2rem;
+  width: 100%;
+  max-height: 80vh; /* 높이 제한: 화면 80% 정도 */
 }
 
 .slide {
   display: none;
   width: 100%;
+  height: auto; /* 이미지 비율 유지 */
+  object-fit: cover; /* 꽉 차게 */
 }
 
 .slide.active {
