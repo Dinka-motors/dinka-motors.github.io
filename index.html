@@ -8,93 +8,46 @@
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 <body>
-  <header>
+  <!-- 상단 로고바 -->
+  <div class="logo-bar">
     <img src="./assets/img/logo.png" class="logo">
+  </div>
+
+  <!-- 메인 슬라이드 섹션 -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>Extreme Performance</h1>
+      <p>Drive Beyond Limits with DINKA MOTORS</p>
+      <a href="#vehicles" class="btn">Explore</a>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#vehicles">Vehicles</a>
-    <a href="#manager">Manager</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="slider">
-    <div class="slider">
-      <img src="./assets/img/1.jpg" class="slide active" alt="Slide 1">
-      <img src="./assets/img/2.jpg" class="slide" alt="Slide 2">
-      <img src="./assets/img/3.jpg" class="slide" alt="Slide 3">
-      <img src="./assets/img/4.jpg" class="slide" alt="Slide 4">
-      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-      <button class="next" onclick="plusSlides(1)">&#10095;</button>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>ABOUT US</h2>
-    <p>DINKA MOTORS는 GTA 세계관에서 영감을 받은 고성능 레이싱 브랜드입니다.</p>
-  </section>
-
-  <section id="vehicles">
-    <h2>VEHICLES</h2>
+  <!-- 타일형 차량 섹션 -->
+  <section id="vehicles" class="vehicle-section">
+    <h2>Vehicles</h2>
     <div class="vehicle-grid">
-      <div class="vehicle">
-        <h3>S95</h3>
-        <img src="./assets/img/s95.jpg" alt="S95">
-        <p>박서 엔진 기반 퍼포먼스 쿠페.</p>
+      <div class="vehicle-card">
+        <img src="./assets/img/car1.jpg" alt="Jester RR">
+        <div class="overlay-text">Jester RR</div>
       </div>
-      <div class="vehicle">
-        <h3>Everon RS</h3>
-        <img src="./assets/img/everon.jpg" alt="Everon RS">
-        <p>극한 환경에 적합한 오프로드 스포츠 트럭.</p>
+      <div class="vehicle-card">
+        <img src="./assets/img/car2.jpg" alt="Perennial">
+        <div class="overlay-text">Perennial</div>
       </div>
-      <div class="vehicle">
-        <h3>Asterope RS</h3>
-        <img src="./assets/img/asterope.jpg" alt="Asterope RS">
-        <p>고출력 세단으로 퍼포먼스와 안락함을 동시에.</p>
+      <div class="vehicle-card">
+        <img src="./assets/img/car3.jpg" alt="Verus">
+        <div class="overlay-text">Verus</div>
       </div>
-      <div class="vehicle">
-        <h3>Vivanite</h3>
-        <img src="./assets/img/vivanite.jpg" alt="Vivanite">
-        <p>도심형 전륜구동 RV.</p>
+      <div class="vehicle-card">
+        <img src="./assets/img/tool.jpg" alt="Seashark">
+        <div class="overlay-text">Seashark</div>
       </div>
     </div>
-  </section>
-
-  <section id="manager">
-    <h2>STORE MANAGER</h2>
-    <img src="./assets/img/manager.jpg" alt="Store Manager" class="manager-img">
-    <p> Johnny Montana | DINKA MOTORS </p>
-  </section>
-
-  <section id="contact">
-    <h2>CONTACT</h2>
-    <p>☎️ 43874888</p>
-    <p>Discord: <a href="https://discord.gg/NTuVb2Uw8N">바로가기</a></p>
   </section>
 
   <footer>
     <p>© 2025 DINKA MOTORS. All rights reserved.</p>
   </footer>
-
-  <script>
-    let slideIndex = 0;
-    const slides = document.getElementsByClassName("slide");
-
-    function showSlides(n) {
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
-      }
-      slideIndex = (n + slides.length) % slides.length;
-      slides[slideIndex].classList.add("active");
-    }
-
-    function plusSlides(n) {
-      showSlides(slideIndex + n);
-    }
-
-    // 자동 슬라이드 순환
-    setInterval(() => plusSlides(1), 6000);
-  </script>
 </body>
 </html>
