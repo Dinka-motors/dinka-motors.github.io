@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DINKA MOTORS</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 <body>
   <header>
-    <img src="assets/img/logo.jpg" alt="Dinka Motors Logo" class="logo">
+    <img src="./assets/img/logo.jpg" alt="Dinka Motors Logo" class="logo">
   </header>
 
   <nav>
@@ -21,10 +21,10 @@
 
   <section id="slider">
     <div class="slider">
-      <img src="assets/img/1.jpg" class="slide active" alt="Slide 1">
-      <img src="assets/img/2.jpg" class="slide" alt="Slide 2">
-      <img src="assets/img/3.jpg" class="slide" alt="Slide 3">
-      <img src="assets/img/4.jpg" class="slide" alt="Slide 4">
+      <img src="./assets/img/1.jpg" class="slide active" alt="Slide 1">
+      <img src="./assets/img/2.jpg" class="slide" alt="Slide 2">
+      <img src="./assets/img/3.jpg" class="slide" alt="Slide 3">
+      <img src="./assets/img/4.jpg" class="slide" alt="Slide 4">
       <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
       <button class="next" onclick="plusSlides(1)">&#10095;</button>
     </div>
@@ -40,22 +40,22 @@
     <div class="vehicle-grid">
       <div class="vehicle">
         <h3>S95</h3>
-        <img src="assets/img/s95.jpg" alt="S95">
+        <img src="./assets/img/s95.jpg" alt="S95">
         <p>박서 엔진 기반 퍼포먼스 쿠페.</p>
       </div>
       <div class="vehicle">
         <h3>Everon RS</h3>
-        <img src="assets/img/everon.jpg" alt="Everon RS">
+        <img src="./assets/img/everon.jpg" alt="Everon RS">
         <p>극한 환경에 적합한 오프로드 스포츠 트럭.</p>
       </div>
       <div class="vehicle">
         <h3>Asterope RS</h3>
-        <img src="assets/img/asterope.jpg" alt="Asterope RS">
+        <img src="./assets/img/asterope.jpg" alt="Asterope RS">
         <p>고출력 세단으로 퍼포먼스와 안락함을 동시에.</p>
       </div>
       <div class="vehicle">
         <h3>Vivanite</h3>
-        <img src="assets/img/vivanite.jpg" alt="Vivanite">
+        <img src="./assets/img/vivanite.jpg" alt="Vivanite">
         <p>도심형 전륜구동 RV.</p>
       </div>
     </div>
@@ -63,7 +63,7 @@
 
   <section id="manager">
     <h2>STORE MANAGER</h2>
-    <img src="assets/img/manager.jpg" alt="Store Manager" class="manager-img">
+    <img src="./assets/img/manager.jpg" alt="Store Manager" class="manager-img">
     <p>Dobi_Jeon | 디지털 전시장을 책임지는 매니저</p>
   </section>
 
@@ -93,7 +93,7 @@
       showSlides(slideIndex + n);
     }
 
-    // 자동 실행 (선택적으로 비활성화 가능)
+    // 자동 슬라이드 순환
     setInterval(() => plusSlides(1), 6000);
   </script>
 </body>
