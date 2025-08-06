@@ -178,3 +178,18 @@ footer {
   padding: 1rem;
   color: #aaa;
 }
+
+
+.btn {
+  background: #f00;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #c00;
+}
