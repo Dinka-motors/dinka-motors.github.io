@@ -252,3 +252,45 @@ footer {
   font-weight: bold;
   text-align: center;
 }
+
+.contact {
+  text-align: center;
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff0;
+}
+
+.contact .subtitle {
+  font-size: 1.2rem;
+  margin: 10px 0 40px;
+  color: #ccc;
+}
+
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.contact-icons img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.map img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
