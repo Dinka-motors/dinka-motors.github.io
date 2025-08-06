@@ -28,7 +28,7 @@ body {
 .slider {
   position: relative;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 250px);
   overflow: hidden;
 }
 
@@ -258,6 +258,12 @@ footer {
   padding: 80px 20px;
   background: #111;
   color: #fff;
+  height: 100vh;             /* 화면 높이에 딱 맞게 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* 세로 중앙 정렬 */
+  align-items: center;       /* 가로 중앙 정렬 */
+  box-sizing: border-box;
 }
 
 .contact h2 {
@@ -288,11 +294,9 @@ footer {
 }
 
 .map img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border: none;
+  width: 950px;
+  height: 532px;
+  object-fit: cover;
 }
 
 .vehicle-card-grid {
@@ -422,4 +426,73 @@ footer {
   height: 100%;
   min-height: 180px;
   box-sizing: border-box;
+}
+
+
+/* 햄버거 메뉴 버튼 */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 60px;
+  background: none;
+  border: none;
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+/* 사이드 메뉴 */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -550px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  transition: left 0.3s ease;
+  z-index: 9998;
+  padding: 1rem;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.side-nav ul li {
+  margin: 1rem 0;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.side-nav ul li a:hover {
+  color: #f00;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+  background: none;
+  border: none;
+  color: #111;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.side-nav.active {
+  left: 0;
+}
+
+.menu-toggle.hidden {
+  display: none;
 }

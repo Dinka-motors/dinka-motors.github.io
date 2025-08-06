@@ -1,144 +1,178 @@
-
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>DINKA MOTORS</title>
-<link href="./assets/css/styles.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>DINKA MOTORS</title>
+  <link href="./assets/css/styles.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="logo-bar">
-<img class="logo" src="./assets/img/logo.png"/>
-</div>
-<!-- 슬라이드 -->
-<section class="slider">
-<div class="slides">
-<div class="slide active" style="background-image: url('./assets/img/1.jpg');">
-<div class="caption">
-<h1>Extreme Performance</h1>
-<p>Drive Beyond Limits with DINKA MOTORS</p>
-<a class="btn" href="#vehicles">Explore</a>
-</div>
-</div>
-<div class="slide" style="background-image: url('./assets/img/2.jpg');">
-<div class="caption">
-<h1>Extreme Performance</h1>
-<p>Drive Beyond Limits with DINKA MOTORS</p>
-<a class="btn" href="#vehicles">Explore</a>
-</div>
-</div>
-<div class="slide" style="background-image: url('./assets/img/3.jpg');">
-<div class="caption">
-<h1>Extreme Performance</h1>
-<p>Drive Beyond Limits with DINKA MOTORS</p>
-<a class="btn" href="#vehicles">Explore</a>
-</div>
-</div>
-</div>
-<button class="nav prev" onclick="moveSlide(-1)">❮</button>
-<button class="nav next" onclick="moveSlide(1)">❯</button>
-<div class="dots">
-<span class="dot active" onclick="setSlide(0)"></span>
-<span class="dot" onclick="setSlide(1)"></span>
-<span class="dot" onclick="setSlide(2)"></span>
-</div>
-</section>
-<!-- 차량 타일 -->
-<section class="vehicle-section" id="vehicles">
-<h2 class="section-title">Vehicles</h2>
-<div class="vehicle-card-grid">
+  <div class="sidebar-menu">
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰ MENU</button>
+    <nav class="side-nav" id="sideNav">
+      <button class="close-btn" onclick="toggleMenu()">✕ MENU</button>
+      <ul>
+        <li><a href="#" onclick="showSection('homeSection')">HOME</a></li>
+        <li><a href="#" onclick="showSection('vehiclesSection')">Vehicles</a></li>
+        <li><a href="#" onclick="showSection('whySection')">Why Choose DINKA?</a></li>
+        <li><a href="#" onclick="showSection('contactSection')">Come visit us!</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="homeSection">
+    <div class="logo-bar">
+      <img class="logo" src="./assets/img/logo.png"/>
+    </div>
+    <section class="slider">
+      <div class="slides">
+        <div class="slide active" style="background-image: url('./assets/img/1.jpg');">
+          <div class="caption">
+            <h1>Extreme Performance</h1>
+            <p>Drive Beyond Limits with DINKA MOTORS</p>
+            <a class="btn" href="#" onclick="showSection('vehiclesSection')">Explore</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('./assets/img/2.jpg');">
+          <div class="caption">
+            <h1>Extreme Performance</h1>
+            <p>Drive Beyond Limits with DINKA MOTORS</p>
+            <a class="btn" href="#" onclick="showSection('vehiclesSection')">Explore</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('./assets/img/3.jpg');">
+          <div class="caption">
+            <h1>Extreme Performance</h1>
+            <p>Drive Beyond Limits with DINKA MOTORS</p>
+            <a class="btn" href="#" onclick="showSection('vehiclesSection')">Explore</a>
+          </div>
+        </div>
+      </div>
+      <button class="nav prev" onclick="moveSlide(-1)">❮</button>
+      <button class="nav next" onclick="moveSlide(1)">❯</button>
+      <div class="dots">
+        <span class="dot active" onclick="setSlide(0)"></span>
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+      </div>
+    </section>
+  </div>
+
+  <section class="vehicle-section" id="vehiclesSection" style="display:none;">
+    <h2 class="section-title">Vehicles</h2>
+    <div class="vehicle-card-grid">
+      <div class="vehicle-card-row">
+        <img alt="Jester RR" src="./assets/img/car1.jpg"/>
+        <div class="vehicle-card-desc" style="background-color: #c0392b;">
+          <h3>2025 Jester RR</h3>
+          <p>Experience the height of performance. Sleek design, top-tier speed, and legendary handling.</p>
+          <p class="price">$48,500</p>
+        </div>
+      </div>
+    
 <div class="vehicle-card-row">
-<img alt="Jester RR" src="./assets/img/car1.jpg"/>
-<div class="vehicle-card-desc" style="background-color: #c0392b;">
-<h3>2025 Jester RR</h3>
-<p>Experience the height of performance. Sleek design, top-tier speed, and legendary handling.</p>
-<p class="price">$48,500</p>
-</div>
+  <img alt="Blista Kanjo" src="./assets/img/car2.jpg"/>
+  <div class="vehicle-card-desc" style="background-color: #2980b9;">
+    <h3>2025 Blista Kanjo</h3>
+    <p>Compact yet fierce. Ideal for city drives with unmatched fuel efficiency.</p>
+    <p class="price">$18,000</p>
+  </div>
 </div>
 <div class="vehicle-card-row">
-<img alt="Perennial" src="./assets/img/car2.jpg"/>
-<div class="vehicle-card-desc" style="background-color: #16a085;">
-<h3>2025 Perennial</h3>
-<p>Experience the height of performance. Sleek design, top-tier speed, and legendary handling.</p>
-<p class="price">$48,500</p>
+  <img alt="Sugoi" src="./assets/img/car3.jpg"/>
+  <div class="vehicle-card-desc" style="background-color: #27ae60;">
+    <h3>2025 Sugoi</h3>
+    <p>Power meets practicality. A hatchback that doesn’t hold back on performance.</p>
+    <p class="price">$32,000</p>
+  </div>
 </div>
+<div class="vehicle-card-row">
+  <img alt="Sugo2i" src="./assets/img/car4.jpg"/>
+  <div class="vehicle-card-desc" style="background-color: #27ae60;">
+    <h3>2025 Sugoi</h3>
+    <p>Power meets practicality. A hatchback that doesn’t hold back on performance.</p>
+    <p class="price">$32,000</p>
+  </div>
 </div>
-<div class="vehicle-card-row" style="background-color: #8e44ad;">
-<img alt="Verus" src="./assets/img/car3.jpg"/>
-<div class="vehicle-card-desc">
-<h3>2025 Verus</h3>
-<p>Experience the height of performance. Sleek design, top-tier speed, and legendary handling.</p>
-<p class="price">$48,500</p>
+  </section>
+
+  <section class="why-dinka" id="whySection" style="display:none;">
+    <h2>Why Choose DINKA?</h2>
+    <div class="underline"></div>
+    <div class="why-icons">
+      <div class="icon-item"><img src="./assets/img/icon1.jpg" alt="Certified"/></div>
+      <div class="icon-item"><img src="./assets/img/icon2.jpg" alt="Certified2"/></div>
+      <div class="icon-item"><img src="./assets/img/icon3.jpg" alt="Certified3"/></div>
+      <div class="icon-item"><img src="./assets/img/icon3.jpg" alt="Certified4"/></div>
+  </section>
+
+  <section class="contact" id="contactSection" style="display:none;">
+    <h2>Come visit us!</h2>
+    <p class="subtitle">AND DRIVE AWAY WITH YOUR NEW CAR!</p>
+    <div class="contact-icons">
+      <img src="./assets/img/email.png" alt="Email"/>
+      <img src="./assets/img/Local.png" alt="Local"/>
+      <img src="./assets/img/Phone.png" alt="Phone"/>
+    </div>
+    <div class="map">
+      <img src="./assets/img/map.jpg"/>
 </div>
-</div>
-<div class="vehicle-card-row" style="background-color: #2c3e50;">
-<img alt="Seashark" src="./assets/img/car4.jpg"/>
-<div class="vehicle-card-desc">
-<h3>2025 Seashark</h3>
-<p>Experience the height of performance. Sleek design, top-tier speed, and legendary handling.</p>
-<p class="price">$48,500</p>
-</div>
-</div>
-</div>
-</section>
-<section class="why-dinka">
-<h2>Why Choose DINKA?</h2>
-<div class="underline"></div>
-<div class="why-icons">
-<div class="icon-item">
-<img alt="Certified" src="./assets/img/icon1.jpg"/>
-</div>
-<div class="icon-item">
-<img alt="Trial" src="./assets/img/icon2.jpg"/>
-</div>
-<div class="icon-item">
-<img alt="Delivery" src="./assets/img/icon3.jpg"/>
-</div>
-<div class="icon-item">
-<img alt="Test Drive" src="./assets/img/icon4.jpg"/>
-</div>
-</div>
-<section class="contact">
-<h2>Come visit us!</h2>
-<p class="subtitle">AND DRIVE AWAY WITH YOUR NEW CAR!</p>
-<div class="contact-icons">
-<img alt="Email" src="./assets/img/email.png"/>
-<img alt="Location" src="./assets/img/location.png"/>
-<img alt="Phone" src="./assets/img/phone.png"/>
-</div>
-<div class="map">
-<img src="./assets/img/map.jpg"/>
-</div>
-</section>
-</section>
-<footer>
-<p>© 2025 DINKA MOTORS. All rights reserved.</p>
-</footer>
+  </section>
+
+  <footer>
+    <p>© 2025 DINKA MOTORS_MONTANA OFFICE (Chuck Greinke). All rights reserved.</p>
+  </footer>
+
 <script>
-    let current = 0;
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-
-    function showSlide(index) {
-      slides.forEach((s, i) => {
-        s.classList.toggle('active', i === index);
-        dots[i].classList.toggle('active', i === index);
-      });
-      current = index;
+  function toggleMenu() {
+    const sideNav = document.getElementById('sideNav');
+    const menuToggle = document.getElementById('menuToggle');
+    if (sideNav.classList.contains('active')) {
+      sideNav.classList.remove('active');
+      menuToggle.classList.remove('hidden');
+    } else {
+      sideNav.classList.add('active');
+      menuToggle.classList.add('hidden');
     }
+  }
 
-    function moveSlide(n) {
-      let index = (current + n + slides.length) % slides.length;
-      showSlide(index);
+  function showSection(id) {
+    const menuToggle = document.getElementById('menuToggle');
+    if (id !== 'homeSection') {
+      menuToggle.style.color = '#fff';
+    } else {
+      menuToggle.style.color = '#111';
     }
+    const ids = ['homeSection', 'vehiclesSection', 'whySection', 'contactSection'];
+    ids.forEach(sec => {
+      const el = document.getElementById(sec);
+      el.style.display = (sec === id) ? 'block' : 'none';
+    });
+    toggleMenu();
+  }
 
-    function setSlide(index) {
-      showSlide(index);
-    }
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
 
-    setInterval(() => moveSlide(1), 8000);
-  </script>
+  function showSlide(index) {
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    current = index;
+  }
+
+  function moveSlide(n) {
+    let index = (current + n + slides.length) % slides.length;
+    showSlide(index);
+  }
+
+  function setSlide(index) {
+    showSlide(index);
+  }
+
+  setInterval(() => moveSlide(1), 8000);
+</script>
 </body>
 </html>
