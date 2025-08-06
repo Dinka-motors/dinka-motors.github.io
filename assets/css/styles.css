@@ -102,7 +102,7 @@ body {
 .dots {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100%;오후 2:47 2025-08-06
   background: #fff;
   padding: 0.5rem 0;
   text-align: center;
@@ -294,8 +294,8 @@ footer {
 }
 
 .map img {
-  width: 950px;
-  height: 532px;
+ width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -305,6 +305,10 @@ footer {
   justify-content: center;
   gap: 30px;
   padding: 0 2rem;
+}
+
+#homeVehicles {
+  margin-top: 30px;
 }
 
 .vehicle-card-row {
@@ -495,4 +499,10 @@ footer {
 
 .menu-toggle.hidden {
   display: none;
+}
+
+.vehicle-section .slider {
+  width: 100%;
+  height: calc(100vh - 250px);  /* 메인과 동일 */
+  overflow: hidden;
 }
