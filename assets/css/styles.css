@@ -9,7 +9,7 @@ body {
 
 .logo-bar {
   background: #fff;
-  height: 80px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@ body {
 .slider {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   overflow: hidden;
 }
 
@@ -192,4 +192,18 @@ footer {
 
 .btn:hover {
   background: #c00;
+}
+
+
+.caption h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.caption p {
+  font-size: 1.8rem;
+  color: #eee;
+  margin-bottom: 2rem;
 }
