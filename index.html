@@ -24,18 +24,13 @@
       </a>
      </li>
      <li>
-      <a href="#" onclick="showSection('vehiclesSection')">
-       Vehicles
-      </a>
-     </li>
-     <li>
       <a href="#" onclick="showSection('whySection')">
-       Why Choose DINKA?
+       ABOUT US
       </a>
      </li>
      <li>
-      <a href="#" onclick="showSection('contactSection')">
-       Come visit us!
+      <a href="#" onclick="showSection('vehiclesSection')">
+       VEHICLES
       </a>
      </li>
     </ul>
@@ -163,7 +158,7 @@
   </div>
   <section class="vehicle-section" id="vehiclesSection" style="display:none;">
    <h2 class="section-title">
-    Vehicles
+    VEHICLES
    </h2>
    <div class="slider">
     <div class="slides">
@@ -228,7 +223,7 @@
   </section>
   <section class="why-dinka" id="whySection" style="display:none;">
    <h2>
-    Why Choose DINKA?
+    ABOUT US
    </h2>
    <div class="underline">
    </div>
@@ -246,17 +241,14 @@
      <img alt="Certified4" src="./assets/img/icon3.jpg"/>
     </div>
    </div>
-  </section>
-  <section class="contact" id="contactSection" style="display:none;">
-   <h2>
-    Come visit us!
-   </h2>
-   <p class="subtitle">
-    AND DRIVE AWAY WITH YOUR NEW CAR!
-   </p>
-   <div class="map">
-    <img src="./assets/img/map.jpg"/>
-   </div>
+    </div>
+    <div class="contact">
+      <h2>COME VISIT US!</h2>
+      <p class="subtitle">AND DRIVE AWAY WITH YOUR NEW CAR!</p>
+      <div class="map">
+        <img src="./assets/img/map.jpg" alt="Map"/>
+      </div>
+    </div>
   </section>
   <footer>
    <p>
@@ -279,7 +271,7 @@ function toggleMenu() {
 function showSection(id) {
   const menuToggle = document.getElementById('menuToggle');
   menuToggle.style.color = (id !== 'homeSection') ? '#fff' : '#111';
-  const ids = ['homeSection', 'vehiclesSection', 'whySection', 'contactSection'];
+  const ids = ['homeSection', 'vehiclesSection', 'whySection'];
   ids.forEach(sec => {
     const el = document.getElementById(sec);
     el.style.display = (sec === id) ? 'block' : 'none';
