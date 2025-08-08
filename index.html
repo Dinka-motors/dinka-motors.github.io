@@ -309,7 +309,13 @@ function createSlider(sectionId) {
     dot.addEventListener('click', () => setSlide(index));
   });
 
-  setInterval(() => moveSlide(1), 8000);
+  if (sectionId === 'homeSection') {
+
+
+    setInterval(() => moveSlide(1), 3500);
+
+
+  }
 }
 
 // 슬라이더 초기화
