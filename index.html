@@ -13,6 +13,10 @@
    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
     ☰ MENU
    </button>
+<a class="menu-badge" href="https://discord.gg/WvkxrvZ8gY" target="_blank" rel="noopener">
+    <img src="./assets/img/dico.png" alt="Quick Link">
+  </a>
+</div>
    <nav class="side-nav" id="sideNav">
     <button class="close-btn" onclick="toggleMenu()">
      ✕ MENU
@@ -50,9 +54,6 @@
        <p>
         Drive Beyond Limits with DINKA MOTORS
        </p>
-       <a class="btn" href="#" onclick="showSection('vehiclesSection')">
-        Explore
-       </a>
       </div>
      </div>
      <div class="slide" style="background-image: url('./assets/img/2.jpg');">
@@ -63,9 +64,6 @@
        <p>
         Drive Beyond Limits with DINKA MOTORS
        </p>
-       <a class="btn" href="#" onclick="showSection('vehiclesSection')">
-        Explore
-       </a>
       </div>
      </div>
      <div class="slide" style="background-image: url('./assets/img/3.jpg');">
@@ -76,9 +74,16 @@
        <p>
         Drive Beyond Limits with DINKA MOTORS
        </p>
-       <a class="btn" href="#" onclick="showSection('vehiclesSection')">
-        Explore
-       </a>
+      </div>
+     </div>
+     <div class="slide" style="background-image: url('./assets/img/4.jpg');">
+      <div class="caption">
+       <h1>
+        Extreme Performance
+       </h1>
+       <p>
+        Drive Beyond Limits with DINKA MOTORS
+       </p>
       </div>
      </div>
     </div>
@@ -94,6 +99,8 @@
      <span class="dot" onclick="setSlide(1)">
      </span>
      <span class="dot" onclick="setSlide(2)">
+     </span>
+     <span class="dot" onclick="setSlide(3)">
      </span>
     </div>
    </section>
@@ -312,7 +319,7 @@ function createSlider(sectionId) {
   if (sectionId === 'homeSection') {
 
 
-    setInterval(() => moveSlide(1), 3500);
+    setInterval(() => moveSlide(1), 5000);
 
 
   }

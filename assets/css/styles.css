@@ -45,7 +45,7 @@ body {
   background-position: center;
   position: absolute;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 2s ease;
 }
 
 .slide.active {
@@ -506,3 +506,26 @@ footer {
   height: calc(100vh - 250px);  /* 메인과 동일 */
   overflow: hidden;
 }
+
+/* 메뉴 줄을 가로 정렬 & 항상 위에 */
+.sidebar-menu{
+  position: fixed;          /* 스크린 상단 고정 */
+  top: 16px;
+  left: 160px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1001;            /* 사이드 패널보다 위로 */
+}
+
+/* 50x50 아이콘 크기 고정 */
+.menu-badge img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;       /* 선택: 살짝 둥글게 */
+}
+
+/* 혹시 side-nav가 더 위에 깔려 있으면 낮춰줌 */
+.side-nav{ z-index: 10050; }
