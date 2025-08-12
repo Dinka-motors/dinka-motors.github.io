@@ -533,6 +533,10 @@ footer {
 /* 여기서부턴 모바일 */
 
 @media (max-width: 600px) {
+  .sidebar-menu { left: 10px; gap: 10px; }
+  .menu-toggle  { left: 10px; }
+  .map img      { height: 260px; }
+
   .side-nav {
     position: fixed;
     inset: 0;
