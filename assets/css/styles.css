@@ -530,8 +530,8 @@ footer {
 /* 혹시 side-nav가 더 위에 깔려 있으면 낮춰줌 */
 .side-nav{ z-index: 10050; }
 
-/* 모바일 (최대 600px) */
-@media (max-width: 600px) {
+/* 모바일 (최대 400px) */
+@media (max-width: 400px) {
   .sidebar-menu { left: 10px; gap: 8px; }
   .vehicle-card-grid { grid-template-columns: 1fr; }
   .slider { height: 44vh; }
