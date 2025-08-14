@@ -210,7 +210,6 @@ footer {
 
 .why-dinka {
   text-align: center;
-  padding: 80px 20px;
   background: #111;
   color: #fff;
 }
@@ -230,19 +229,27 @@ footer {
 .why-icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 40px;
+  gap: 15px !important; /* grid 간격 강제 축소 */
   justify-items: center;
 }
 
+.icon-item {
+  display: flex;
+  flex-direction: column; /* 세로로 나열 */
+  align-items: center;    /* 가로 가운데 정렬 */
+  justify-content: center;/* 세로 중앙 맞춤 (필요시) */
+  text-align: center;
+  margin: 0 !important;   /* 불필요한 바깥 여백 제거 */
+  padding: 0 !important;  /* 불필요한 안쪽 여백 제거 */
+}
+
 .icon-item img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 15px;
+  display: block;
+  margin: 0 auto 10px; /* 아래 여백 10px */
 }
 
 .icon-item p {
-  font-weight: 600;
+  font-weight: 1600;
   color: #ccc;
 }
 
@@ -255,15 +262,38 @@ footer {
 
 .contact {
   text-align: center;
-  padding: 80px 20px;
   background: #111;
   color: #fff;
-  height: 100vh;             /* 화면 높이에 딱 맞게 */
+  height: auto !important;          /* 한 화면 높이 없애기 */
+  padding-top: 20px !important;     /* 위 여백 축소 (기존 80px) */
+  padding-bottom: 30px !important;  /* 아래 여백도 조금만 */
   display: flex;
   flex-direction: column;
   justify-content: center;   /* 세로 중앙 정렬 */
   align-items: center;       /* 가로 중앙 정렬 */
   box-sizing: border-box;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center; /* 가운데 정렬 */
+  gap: 100px; /* 지도와 텍스트 사이 간격 */
+}
+
+.contact-info {
+  max-width: 400px;
+}
+
+.contact-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 .contact h2 {
@@ -562,4 +592,20 @@ footer {
   font-size: 3rem;    /* 원래 크기로 복원 */
   font-weight: 700;   /* 굵기 */
   color: #fff;        /* 색상 유지 */
+}
+
+.vehicles-logo {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* 비율 유지하며 안 잘리게 */
+  margin: 0 auto 20px; /* 가운데 정렬 + 아래 여백 */
+}
+
+.section-divider {
+  border: none;
+  height: 2px;
+  background: #444; /* 선 색상 */
+  margin: 40px auto; /* 위아래 간격 */
+  width: 80%; /* 선 길이 */
 }
