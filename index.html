@@ -23,17 +23,17 @@
     </button>
     <ul>
      <li>
-      <a href="#" onclick="showSection('homeSection')">
+      <a href="#home">
        HOME
       </a>
      </li>
      <li>
-      <a href="#" onclick="showSection('whySection')">
+      <a href="#service">
        SERVICE
       </a>
      </li>
      <li>
-      <a href="#" onclick="showSection('vehiclesSection')">
+      <a href="#vehicles">
        VEHICLES
       </a>
      </li>
@@ -296,12 +296,28 @@ function toggleMenu() {
 function showSection(id) {
   const menuToggle = document.getElementById('menuToggle');
   menuToggle.style.color = (id !== 'homeSection') ? '#fff' : '#111';
+
   const ids = ['homeSection', 'vehiclesSection', 'whySection'];
   ids.forEach(sec => {
     const el = document.getElementById(sec);
     el.style.display = (sec === id) ? 'block' : 'none';
   });
-  toggleMenu();
+
+  // 사이드 메뉴 닫기
+  const sideNav = document.getElementById('sideNav');
+  if (sideNav.classList.contains('active')) {
+    sideNav.classList.remove('active');
+    document.getElementById('menuToggle').classList.remove('hidden');
+  }
+}
+
+// 현재 hash 값을 읽어 섹션을 표시
+function renderFromHash() {
+  const hash = (location.hash || '#home').toLowerCase();
+  let target = 'homeSection';
+  if (hash === '#service') target = 'whySection';
+  else if (hash === '#vehicles') target = 'vehiclesSection';
+  showSection(target);
 }
 
 // 공통 슬라이더 함수 생성기
@@ -345,6 +361,9 @@ function createSlider(sectionId) {
 
 // 슬라이더 초기화
 window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('hashchange', renderFromHash);
+  renderFromHash();
+  
   createSlider('homeSection');
   createSlider('vehiclesSection');
 });
